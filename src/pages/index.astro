@@ -1,0 +1,192 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+import Logo from '../../public/logo.svg';
+import Simbolo from '../../public/simboloche.svg'
+import SwitchDarkLight from '../components/SwitchDarkLight.astro';
+
+---
+
+<Layout title="CHE! Design">
+	
+	<main>
+		<div class="SwitchDarkLight"><SwitchDarkLight/></div>
+		<img src={Simbolo} alt="" class="simbolo">
+		<h1>Diseño Grafico</h1>
+		<img class="logo" src={Logo} alt="Logo Che">
+		<div>
+			<ul role="list" class="link-card-grid">
+				<Card
+					href=portfolio
+					title="Portfolio"
+					body="Algunos trabajos realizados."
+				/>
+				<Card
+				href=servicios
+				title="Servicios"
+				body="Conozca las posiblidades que le brindamos."
+				/>
+				<Card
+				href=acercade
+				title="Acerca de"
+				body="Conozca más sobre CHE!."
+				/>
+			</ul>
+			<p>Una <span class="subrayado">Agencia Creativa</span> para <br>que <span class="subrayado">juntos destaquemos</span><br>tu <span class="subrayado">Negocio</span> :) </p>
+		</div>
+	</main>
+</Layout>
+
+<style>
+.SwitchDarkLight{
+	position: fixed;
+	top: 50px;
+	right: 50px;
+}
+main {
+	margin: auto;
+	width: 85vw;
+	height: 70vh;
+	padding: 6rem;
+	display: flex;
+	flex-direction: column;
+	align-items: end;
+}
+img.logo{
+	width: 500px;
+}
+main div{
+	display: flex;
+
+}
+ul{
+	width: 400px;
+	position: absolute;
+	left: 50px;
+	bottom: 50px;
+}
+h1 {
+	font-size: 3rem;
+	font-weight: 800;
+	margin: 0;
+	color: var(--c-l);
+	opacity: 0;
+	position: fixed;
+	top: -200px;
+	z-index: -1;
+}
+div p{
+	width: 400px;
+	height: fit-content;
+}
+@media screen and (max-width: 900px){
+	main{
+		gap: 20px;
+		justify-content: center;
+		align-items: center;
+		width: auto;
+		height: auto;
+
+	}
+	main div{
+		gap: 20px;
+		flex-direction: column-reverse;
+	}
+	img.logo{
+		width: 510px;
+	}
+	ul {
+		margin: 0px;
+		width: fit-content;
+		position: static;
+	}
+}
+@media screen and (max-width: 600px){
+	.SwitchDarkLight{
+	position: static;
+		margin-top: -40px;
+		margin-left: 95%
+}
+	main{
+		gap: 20px;
+		justify-content: center;
+		align-items: center;
+		width: auto;
+		height: auto;
+		padding: 2rem;
+	}
+	main div{
+		gap: 20px;
+		flex-direction: column-reverse;
+	}
+	img.logo{
+		width: auto;
+		margin-top: 40px;
+	}
+	ul {
+		margin: 0px;
+
+	}
+}
+
+p{
+	color: var(--c-primary);
+	font-size: 28px;
+	font-family: 'Times New Roman', Times, serif;
+}
+span.subrayado{
+	text-decoration: underline;
+	transition: color 300ms;
+}
+span.subrayado:hover{
+	background-color: var(--c-primary);
+	color: var(--c-l);
+}
+.c-primary {
+	color: var(--c-primary);
+}
+.instructions {
+	line-height: 1.6;
+	margin: 1rem 0;
+	border: 1px solid rgba(var(--accent), 25%);
+	background-color: white;
+	padding: 1rem;
+	border-radius: 0.4rem;
+}
+.instructions code {
+	font-size: 0.875em;
+	font-weight: bold;
+	background: rgba(var(--accent), 12%);
+	color: rgb(var(--accent));
+	border-radius: 4px;
+	padding: 0.3em 0.45em;
+}
+.instructions strong {
+	color: rgb(var(--accent));
+}
+.link-card-grid {
+	display: inline-block;
+	padding: 0;
+}
+.card{
+	margin: 100px;
+}
+.simbolo{
+	position: fixed;
+	bottom: -50vh;
+	left: -20vw;
+	opacity: 20%;
+	scale: 1.5;
+	animation: giro 60s linear infinite;
+	z-index: -1;
+	
+}
+@keyframes giro {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+</style>

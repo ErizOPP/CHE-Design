@@ -1,0 +1,74 @@
+---
+interface Props {
+	title: string;
+	body: string;
+    imgsrc: string;
+	href: string;
+}
+
+const { href, title, body, imgsrc} = Astro.props;
+---
+
+<li class="portfolio-cards">
+	<a href={href}>
+		<h2>
+			{title}
+			<span>&rarr;</span>
+		</h2>
+		<p>
+			{body}
+		</p>
+        <img src={imgsrc} alt={title}>
+	</a>
+</li>
+<style>
+	.portfolio-cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 400px;
+        height: 300px;
+		margin: 20px;
+		background-color: var(--c-primary);
+		border-radius: 1rem;
+		transition: background-color 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+        box-shadow: var(--b-s-1);
+        overflow: hidden;
+    }
+
+	.portfolio-cards > a {
+		text-decoration: none;
+		line-height: 1.6;
+		padding: 0.5rem 0.8rem;
+		border-radius: 0.6rem;
+		color: var(--c-l);
+	}
+	h2 {
+		margin: 0;
+        padding: 0rem 0.8rem;
+		font-family: 'Times New Roman', Times, serif;
+		font-size: 2rem;
+		transition: color 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+	}
+	p {
+		margin: 0;
+        padding: 0rem 0.8rem 0.5rem 0.8rem;
+        font-size: 1.2rem;
+        line-height: 140%;
+	}
+    img{
+        width: 400px;
+        border-radius: 1rem;
+        padding: 0;
+        margin-bottom: -15px;
+        box-shadow: var(--b-s-2);
+        transition: transform 300ms;
+   }
+    .portfolio-cards:is(:hover) h2 {
+		color: var(--c-d);
+	}
+    .portfolio-cards:is(:hover) img {
+		transform: translateY(-40px)
+	}
+
+</style>

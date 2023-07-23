@@ -1,0 +1,37 @@
+---
+import Layout from '../layouts/Layout.astro';
+import BackPage from '../components/BackPage.astro'
+import SwitchDarkLight from '../components/SwitchDarkLight.astro';
+
+interface Props {
+	title: string;
+}
+const { title } = Astro.props;
+---
+
+    <main>
+        <section class="header">
+            <div><BackPage href=/></BackPage></div>
+            <h1>{title}</h1>
+            <div><SwitchDarkLight></SwitchDarkLight></div>
+        </section>
+    </main>
+
+
+<style>
+    main{
+
+    }
+    section.header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0px 40px;
+    }
+
+    h1{
+        color: var(--c-primary);
+    }
+</style>
+
+<>
