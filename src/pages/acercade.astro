@@ -1,0 +1,77 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import AboutMeCover from '../../public/about-me-cover.webp'
+---
+
+<Layout title='Acerca De'>
+    <Header title='Acerca De'/>
+    <main>
+        <article>
+            <section class="che">
+                <h3>Acerca de CHE! design</h3>
+                <p>Soy un Estudio Independiente con una amplio conocimiento en distintas areas del Diseño Gráfico, Fotografía e Ilustración.</p>
+            </section>
+            <section class="me">
+                <h3>Acerca de Mi</h3>
+                <p>Soy Santiago Vicente Ramos, actualmente me encuentro estudiando Diseño Gráfico en la Escuela Superior de Artes Visuales Lino Enea Spilimbergo.</p>
+                
+            </section>
+            <section class="contact">
+                <h3>Contacto</h3>
+                <p>
+                    <a href="">Ig</a>
+                    <a href="">LI</a>
+                    <a href="">Bh</a>
+                    <a href="">Ml</a>
+                </p>
+            </section>
+        </article>
+        <img src={AboutMeCover}>
+    </main>
+</Layout>
+
+<style>
+    main{
+        color: var(--c-d);
+        display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    }
+    article {
+        align-self: center;
+    }
+        section.che{
+
+        }
+        section.me{
+
+        }
+            h3{
+                text-shadow: 0px 0px 30px var(--c-d);
+            }
+            p{
+                max-width: 50ch;
+            }
+            a{
+                text-decoration: none;
+                color: var(--c-d);
+                font-weight: bolder;
+                border: 2px solid var(--c-primary);
+                padding: 0.5rem;
+                border-radius: var(--b-r-1);
+                margin: 0px 0.6rem;
+            }
+                a:hover{
+                    background-color: var(--c-primary);
+                    border: 2px solid var(--c-d);
+                }
+        img{
+            width: 80%;
+            max-width: 500px;
+            margin: 20px;
+            border-radius: var(--b-r-2);
+            box-shadow: 0px 0px 20px var(--c-l), 0px 0px 1000px var(--c-primary) ;
+        }
+
+</style>

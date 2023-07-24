@@ -1,0 +1,37 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Simbolo from '../../public/simboloche.svg'
+---
+
+<Layout title="404, no lo he encontrado">
+  <main>
+    <h1>404 Not Fount</h1>
+    <h2>Oh, vaya. <br> ¡Nos hemos perdido!</h2>
+    <img src="https://midu.dev/images/this-is-fine-404.gif" />
+    <h2><a href="/">¿Volvemos a Empezar?</a></h2>
+    <img src={Simbolo} alt="" class="simbolo">
+  </main>
+</Layout>
+
+<style>
+    main{
+      margin: auto;
+      width: fit-content;
+    }
+    img{
+      border-radius: var(--b-r-2);
+    }
+    h1, h2{
+      color: var(--c-primary);
+      text-align: center;
+    }
+    h1{
+      font-size: 4rem;
+    }
+    a{
+      color: var(--c-primary);
+    }
+    a:hover{
+      color: var(--c-extra);
+    }
+</style>

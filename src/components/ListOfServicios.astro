@@ -1,0 +1,24 @@
+---
+import ServicioItem from "./ServicioItem.astro";
+import { getServicios } from '../data/servicio'
+
+const servicios = await getServicios()
+---
+
+<ul>
+  {
+    servicios.map(({title, cover, description, href}) => {
+      return (
+          <ServicioItem title={title} cover={cover} description={description} href={href} />
+      )
+    })
+  }
+</ul>
+
+<style>
+  ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+</style>

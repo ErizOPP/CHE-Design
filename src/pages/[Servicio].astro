@@ -1,0 +1,29 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { getServicios } from "../data/servicio";
+
+const { servicio } = Astro.params
+
+const info = (await getServicios({ filterBy: servicio }))[0]
+
+if (!info) { 
+  return Astro.redirect("/404")
+}
+---
+
+<Layout title={`Servicio ${info.title}`}>
+    <main>
+        <header></header>
+        <div>
+            <h1>{info.title}</h1>
+            <p class="">{info.description}</p>
+            <picture>
+                <img 
+                class=""
+                src={info.cover}
+                alt={`Servicio ${info.title}`}
+                >
+            </picture>
+        </div>
+    </main>
+</Layout>

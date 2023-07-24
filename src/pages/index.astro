@@ -1,6 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
+import Indice from '../components/Indice.astro';
 import Logo from '../../public/logo.svg';
 import Simbolo from '../../public/simboloche.svg'
 import SwitchDarkLight from '../components/SwitchDarkLight.astro';
@@ -16,17 +16,17 @@ import SwitchDarkLight from '../components/SwitchDarkLight.astro';
 		<img class="logo" src={Logo} alt="Logo Che">
 		<div>
 			<ul role="list" class="link-card-grid">
-				<Card
+				<Indice
 					href=portfolio
 					title="Portfolio"
 					body="Algunos trabajos realizados."
 				/>
-				<Card
+				<Indice
 				href=servicios
 				title="Servicios"
 				body="Conozca las posiblidades que le brindamos."
 				/>
-				<Card
+				<Indice
 				href=acercade
 				title="Acerca de"
 				body="Conozca más sobre CHE!."
@@ -164,29 +164,13 @@ span.subrayado:hover{
 .instructions strong {
 	color: rgb(var(--accent));
 }
-.link-card-grid {
+.link-Indice-grid {
 	display: inline-block;
 	padding: 0;
 }
-.card{
+.Indice{
 	margin: 100px;
 }
-.simbolo{
-	position: fixed;
-	bottom: -50vh;
-	left: -20vw;
-	opacity: 20%;
-	scale: 1.5;
-	animation: giro 60s linear infinite;
-	z-index: -1;
-	
-}
-@keyframes giro {
-	from {
-		transform: rotate(0deg);
-	}
-	to {
-		transform: rotate(360deg);
-	}
-}
+
+
 </style>
