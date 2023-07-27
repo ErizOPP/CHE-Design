@@ -14,7 +14,7 @@ import SwitchDarkLight from '../components/SwitchDarkLight.astro';
 		<img src={Simbolo} alt="" class="simbolo">
 		<h1>Diseño Grafico</h1>
 		<img class="logo" src={Logo} alt="Logo Che">
-		<div>
+		<div class="menu">
 			<ul role="list" class="link-card-grid">
 				<Indice
 					href=portfolio
@@ -44,26 +44,24 @@ import SwitchDarkLight from '../components/SwitchDarkLight.astro';
 	right: 50px;
 }
 main {
-	margin: auto;
-	width: 85vw;
-	height: 70vh;
-	padding: 6rem;
-	display: flex;
-	flex-direction: column;
-	align-items: end;
+    padding: 6rem;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
 }
 img.logo{
 	width: 500px;
 }
-main div{
-	display: flex;
+main div.menu{
+    display: flex;
+    width: -webkit-fill-available;
+    justify-content: space-between;
 
 }
 ul{
-	width: 400px;
-	position: absolute;
-	left: 50px;
-	bottom: 50px;
+    width: 400px;
+    margin: 0;
+    padding: 0;
 }
 h1 {
 	font-size: 3rem;
@@ -74,10 +72,6 @@ h1 {
 	position: fixed;
 	top: -200px;
 	z-index: -1;
-}
-div p{
-	width: 400px;
-	height: fit-content;
 }
 @media screen and (max-width: 900px){
 	main{
@@ -96,7 +90,6 @@ div p{
 		width: 510px;
 	}
 	ul {
-		margin: 0px;
 		width: fit-content;
 		position: static;
 	}
@@ -104,7 +97,7 @@ div p{
 @media screen and (max-width: 600px){
 	.SwitchDarkLight{
 	position: static;
-		margin-top: -40px;
+		margin-top: -32px;
 		margin-left: 95%
 }
 	main{
@@ -122,10 +115,6 @@ div p{
 	img.logo{
 		width: auto;
 		margin-top: 40px;
-	}
-	ul {
-		margin: 0px;
-
 	}
 }
 

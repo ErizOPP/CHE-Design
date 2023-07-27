@@ -10,7 +10,7 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@notionhq/client": "^2.2.8",
+    "@notionhq/client": "^2.2.9",
     "astro": "^2.8.4",
     "astro-icon": "^0.8.1",
     "git": "^0.1.5",

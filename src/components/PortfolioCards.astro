@@ -1,12 +1,18 @@
 ---
-interface Props {
+export interface Props {
+	slug: string;
+	content: string;
+	images: string;
+	category: string;
+	program: string;
+
 	title: string;
     imgsrc: string;
 	href: string;
 }
 
 
-const { href, title, imgsrc} = Astro.props;
+const {slug, content, images, category, program, href, title, imgsrc} = Astro.props;
 ---
 
 <li class="portfolio-cards">
@@ -33,7 +39,6 @@ const { href, title, imgsrc} = Astro.props;
     }
 
 	.portfolio-cards > a {
-		text-decoration: none;
 		line-height: 1.6;
 		padding: 0.5rem 0.8rem;
 		border-radius: 0.6rem;

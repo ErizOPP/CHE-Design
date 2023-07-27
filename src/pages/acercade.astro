@@ -10,24 +10,25 @@ import AboutMeCover from '../../public/about-me-cover.webp'
         <article>
             <section class="che">
                 <h3>Acerca de CHE! design</h3>
-                <p>Soy un Estudio Independiente con una amplio conocimiento en distintas areas del Diseño Gráfico, Fotografía e Ilustración.</p>
+                <p>Soy un Estudio Independiente con una amplio conocimiento en distintas areas del Diseño Gráfico, Fotografía e Ilustración. <br>Diseño multidisciplinario dedicado al desarrollo de identidad de marca.</p>
             </section>
             <section class="me">
                 <h3>Acerca de Mi</h3>
-                <p>Soy Santiago Vicente Ramos, actualmente me encuentro estudiando Diseño Gráfico en la Escuela Superior de Artes Visuales Lino Enea Spilimbergo.</p>
+                <p>Soy Santiago Vicente Ramos, actualmente me encuentro estudiando Diseño Gráfico en la Escuela Superior de Artes Visuales Lino Enea Spilimbergo. <br> <br>Trabajo principalmente como Freelancer, mi objetivo es brindarte todo mi conocimiento para solucionar tus necesidades comunicacionales que necesite tu Negocio.<br></p>
                 
             </section>
             <section class="contact">
-                <h3>Contacto</h3>
+                <h3>Contacto </h3>
+                
                 <p>
-                    <a href="">Ig</a>
-                    <a href="">LI</a>
-                    <a href="">Bh</a>
-                    <a href="">Ml</a>
+                    <a target="_blank" href="https:/instagram.com/chedisenografico"><span class="ico icon-instagram"></span></a>
+                    <a target="_blank" href="https://www.behance.net/santiagoramos1"><span class="ico icon-behance"></span></a>
+                    <a target="_blank" href="https://www.linkedin.com/in/santiago-vicente-ramos-28876b23b/"><span class="ico icon-linkedin2"></span></a>
+                    <a target="_blank" href="mailto:santiagovicenteramos@gmail.com"><span class="ico icon-gmail"></span></a>
                 </p>
             </section>
         </article>
-        <img src={AboutMeCover}>
+        <img class="photo" src={AboutMeCover}>
     </main>
 </Layout>
 
@@ -53,20 +54,21 @@ import AboutMeCover from '../../public/about-me-cover.webp'
             p{
                 max-width: 50ch;
             }
-            a{
-                text-decoration: none;
-                color: var(--c-d);
-                font-weight: bolder;
-                border: 2px solid var(--c-primary);
-                padding: 0.5rem;
-                border-radius: var(--b-r-1);
-                margin: 0px 0.6rem;
+            .social-media{
+                font-family: ;
             }
-                a:hover{
-                    background-color: var(--c-primary);
-                    border: 2px solid var(--c-d);
-                }
-        img{
+            a{
+                padding: 0.5rem;
+                margin: 0px 0.6rem;
+                text-decoration: none;
+                font-size: 2rem;
+                transition: 200ms;
+                color: var(--c-d);
+            }
+            a:hover{
+                color: var(--c-primary);
+            }
+        img.photo{
             width: 80%;
             max-width: 500px;
             margin: 20px;

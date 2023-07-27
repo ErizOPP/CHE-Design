@@ -1,20 +1,16 @@
 ---
 import { Icon } from "astro-icon";
 ---
-
 <div>
-  
   <select name="themeSwitch" id="themeSwitch">
     <option value="system">Auto</option>
     <option value="dark">Oscuro</option>
     <option value="light">Claro</option>
   </select>
 </div>
-
 <style>
   :global(.dark) {
     color-scheme: dark;
-  /*<Icon class="w-4 h-4 mr-2" name="heroicons-outline:sun" />*/
   }
   select {
     z-index: 1;
@@ -24,30 +20,11 @@ import { Icon } from "astro-icon";
     color: var(--c-primary);
     cursor: pointer;
   }
-  select::selection{
-    border: 0px;
-  }
-  select option {
-    background: var(--trans);
-    background-image: var(--trans);
-    color: var(--c-primary);
-    border-radius: none;
-    border: 0px;
-    cursor: pointer;
-  }
-  select option {
-  margin: 40px;
-  background: var(--trans);
-}
-option:not(:checked) { 
-  background: var(--trans); 
-}
 option:checked { 
   background: var(--c-primary);
   color: var(--c-l);
 }
 </style>
-
 <script>
   const select = document.getElementById("themeSwitch") as HTMLSelectElement;
   const theme = localStorage.getItem("theme");

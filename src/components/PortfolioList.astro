@@ -1,0 +1,18 @@
+---
+import PortfolioCards from "./PortfolioCards.astro";
+import { getPortfolio } from '../data/portfolio-notion'
+
+const books = await getPortfolio()
+---
+
+<ul class="grid grid-cols-2 md:grid-cols-3 gap-3 px-4">
+  {
+    books.map(({ id, title, img }) => {
+      return (
+        <li>
+          <PortfolioCards id={id} title={title} img={img} />
+        </li>
+      )
+    })
+  }
+</ul>
