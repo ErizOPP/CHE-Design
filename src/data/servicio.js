@@ -2,24 +2,24 @@ export const getServicios = async ({ filterBy } = {}) => [
     {
         title: 'Marca Corporativa',
         description: 'Identidad Corporativa, Logo, Manual de Marca y más para tu Negocio.',
-        cover: '../../public/Servicios/cover-branding.jpg',
+        cover: '../../public/servicios/cover-branding.jpg',
         href: 'servicios/branding'
     },
     {
         title: 'Maquetación Editorial',
         description: 'Maquetación de Libros, Brochuré y Revistas, Diseño de Tapa y Contratapa.',
-        cover: '../../public/Servicios/cover-editorial.jpg',
+        cover: '../../public/servicios/cover-editorial.jpg',
         href: 'servicios/editorial'
     },
     {
         title: 'Infografía',
         description: 'Representación visual de información y datos, en gráficos, barras, mapas, etc.',
-        cover: '../../public/Servicios/cover-infografia.png',
+        cover: '../../public/servicios/cover-infografia.png',
         href: 'servicios/infografias'
     },
     {
         title: 'Desarrollo Web',
-        cover: '../../public/Servicios/cover-web.jpg',
+        cover: '../../public/cover-web.jpg',
         description: 'Creación de paginas estáticas para landingpages, uso de Astro Build para blogs y Wordpress para tiendas web. ',
         href: 'servicios/publicidad'
     },
