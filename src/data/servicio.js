@@ -14,7 +14,7 @@ export const servicio = [
     {
         title: 'Infografía',
         description: 'Representación visual de información y datos, en gráficos, barras, mapas, etc.',
-        img: '/servicios/cover-infografia.png',
+        img: "/servicios/cover-infog.png",
         href: 'servicios/infografias'
     },
     {
