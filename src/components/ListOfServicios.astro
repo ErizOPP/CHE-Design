@@ -1,15 +1,15 @@
 ---
 import ServicioItem from "./ServicioItem.astro";
-import { getServicios } from '../data/servicio'
+import { servicio } from '../data/servicio'
 
-const servicios = await getServicios()
+const servicios = servicio
 ---
 
 <ul>
   {
-    servicios.map(({title, cover, description, href}) => {
+    servicios.map(({title, img, description, href}) => {
       return (
-          <ServicioItem title={title} cover={cover} description={description} href={href} />
+          <ServicioItem title={title} img={img} description={description} href={href} />
       )
     })
   }

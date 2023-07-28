@@ -2,13 +2,13 @@
 export interface Props {
     title: any,
     description: String,
-    cover: any,
-    href: any
+    img: string,
+    href: any,
 }
 
 const {
   title,
-  cover,
+  img,
   description,
   href
 } = Astro.props
@@ -19,7 +19,7 @@ const {
     <h2>{title}</h2>
     <hr>
     <p>{description}</p>    
-    <img src={cover} alt={title}>
+    <img src={img} alt={title}>
   </a>
 </li>
 

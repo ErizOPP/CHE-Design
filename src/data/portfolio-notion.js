@@ -18,7 +18,7 @@ export const getPortfolio = async ({ filterBy } = {}) => {
         }
     }
     const { results } = await notion.databases.query(query)
-
+    console.log(results);
     return results.map(page => {
         const { properties } = page
         const { slug, title } = properties;
@@ -27,5 +27,6 @@ export const getPortfolio = async ({ filterBy } = {}) => {
             id: slug.rich_text[0].plain_text,
             title: title.title[0].plain_text,
         }
+        
     })
 }
