@@ -15,7 +15,7 @@ const { title } = Astro.props;
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/simboloche.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<link rel="stylesheet" href="../../public/social-media-style.css">
+		<link rel="stylesheet" href="/public/social-media-style.css">
 		<title>{title}</title>
 	</head>
 	<body>
@@ -84,5 +84,43 @@ const { title } = Astro.props;
 		transform: rotate(360deg);
 	}
 }
+
+/*FONT ICON IMPORT */  /*FONT ICON IMPORT */  /*FONT ICON IMPORT */
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../../public/social-media-font.ttf');
+  src: url('../../public/social-media-font.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-gmail:before {
+  content: "\e900";
+}
+.icon-instagram:before {
+  content: "\ea92";
+}
+.icon-behance:before {
+  content: "\eaa8";
+}
+.icon-linkedin2:before {
+  content: "\eaca";
+}
+
 
 </style>
