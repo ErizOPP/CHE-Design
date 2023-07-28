@@ -8,18 +8,18 @@ export const servicio = [
     {
         title: 'Maquetación Editorial',
         description: 'Maquetación de Libros, Brochuré y Revistas, Diseño de Tapa y Contratapa.',
-        img: "/servicios/cover-editorial.jpg",
+        img: "/servicios/cover-editorial.webp",
         href: 'servicios/editorial'
     },
     {
         title: 'Infografía',
         description: 'Representación visual de información y datos, en gráficos, barras, mapas, etc.',
-        img: "/servicios/cover-infog.png",
+        img: "/servicios/cover-infog.webp",
         href: 'servicios/infografias'
     },
     {
         title: 'Desarrollo Web',
-        img: "/servicios/cover-web.jpg",
+        img: "/servicios/cover-web.webp",
         description: 'Creación de paginas estáticas para landingpages, uso de Astro Build para blogs y Wordpress para tiendas web. ',
         href: 'servicios/publicidad'
     },
