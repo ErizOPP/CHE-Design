@@ -1,0 +1,37 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Logo from '../../public/logo.svg';
+import Header from '../components/Header.astro';
+---
+
+<Layout title="CHE! Design - Tarifa">
+	<Header title='Tarifa'/>
+	<main>
+		<img class="logo" src={Logo} alt="Logo Che">
+        <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRL1hnCd47lqwrYl0TfXNzFvx05b8Xkl81UVu4y0Xfa3LR7WVzcqeWUxOSkWk5uROWu319PBApRkWpL/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
+    	</main>
+</Layout>
+
+<style>
+    main{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+    h1{
+        width: fit-content;
+    }
+    img.logo{
+        width: 200px;
+    }
+    iframe{
+        height: 70vh;
+        width: 90%;
+        border: var(--b-s-2);
+        border-radius: var(--b-r-1);
+        box-shadow: var(--b-s-2);
+    }
+    
+
+</style>

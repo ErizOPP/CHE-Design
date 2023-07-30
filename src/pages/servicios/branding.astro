@@ -1,14 +1,22 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import Header from "../../components/Header.astro";
+import Edit from '../servicios/editorial.md'
 ---
 
 <Layout title='Marca Corporativa' >
     <Header title='Marca Corporativa'/>
-    Marca Corporativa <br>
-    Diseño de la estética general de la marca y Manual de Marca: diseño de logotipo <br>
-    Elección de tipografías, paleta cromática y diseño de elementos gráficos decorativos. <br>
-    Recomendaciones de Buenas Practicas de uso con tu marca. <br>
-    Mock Up para que veas brillar tu marca en la vida real 
-
+    <section>
+        <Edit/>
+    </section>
 </Layout>
+
+<style>
+section{
+    margin: auto;
+    max-width: 1024px;
+}
+p{
+    max-width: 80ch;
+}
+</style>
