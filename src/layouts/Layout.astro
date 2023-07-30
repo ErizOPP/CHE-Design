@@ -15,9 +15,10 @@ const { title } = Astro.props;
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/simboloche.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<link rel="stylesheet" href="/public/social-media-style.css">
 		<title>{title}</title>
 	</head>
+	<nav class="info"> Si estas viendo esta página, actualmente está en desarrollo</nav>
+
 	<body>
 		<slot />
 	</body>
@@ -65,6 +66,20 @@ const { title } = Astro.props;
 		text-decoration: none;
 	}
 
+	nav.info{
+		position: fixed;
+		left: 50%;
+		transform: translateX(-50%);
+		width: 100%;
+		background-color: #327eae;
+		color: #fff;
+		padding: 4px 12px;
+		font-weight: 500;
+		text-align: center;
+		bottom: 0;
+		z-index: 100;
+	}
+
 /*CSS COMPARTIDO ENTRE PAGINAS*/	/*CSS COMPARTIDO ENTRE PAGINAS*/
 .simbolo{
 	position: fixed;
@@ -89,8 +104,8 @@ const { title } = Astro.props;
 /*FONT ICON IMPORT */  /*FONT ICON IMPORT */  /*FONT ICON IMPORT */
 @font-face {
   font-family: 'icomoon';
-  src:  url('../../public/social-media-font.ttf');
-  src: url('../../public/social-media-font.ttf') format('truetype');
+  src:  url('/social-media-font.ttf');
+  src: url('/social-media-font.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
   font-display: block;
