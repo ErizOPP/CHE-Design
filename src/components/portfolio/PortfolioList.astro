@@ -1,0 +1,18 @@
+---
+import PortfolioCards from "../portfolio/PortfolioCards.astro";
+import { getPortfolios } from '../../data/portfolio-notion'
+
+const portoflios = await getPortfolios()
+---
+
+<ul>
+  {
+    portoflios.map(({ id, title, img }) => {
+      return (
+        <li>
+          <PortfolioCards id={id} title={title} img={img} />
+        </li>
+      )
+    })
+  }
+</ul>

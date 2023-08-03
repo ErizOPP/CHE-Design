@@ -1,0 +1,94 @@
+---
+export interface Props {
+    subtitle: string,
+    img1: string,
+    img2: string,
+    img3: string,
+    img4: string,
+    id: number,
+}
+const {
+    subtitle,
+    img1,
+    img2,
+    img3,
+    img4,
+    id,
+} = Astro.props
+
+function select(){
+}
+
+---
+
+<article class="cardquiz">
+    <h3>{subtitle}</h3>
+    <section class="response">
+        <img srcset={img1}>
+        <img src={img2}>
+        <img src={img3}>
+        <img src={img4}>
+    </section>
+
+    <aside>{id}</aside>
+
+</article>
+
+<style>
+.cardquiz{
+}
+h3{
+    color: var(--c-extra);
+    text-align: center;
+    font-size: 1.5rem;
+}
+p {
+  margin: 0;
+  padding: 0rem 0.8rem 0.5rem 0.8rem;
+  font-size: 1.2rem;
+  line-height: 140%;
+}
+.response{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin: 2rem;
+}
+img{
+    max-width: 300px;
+    max-height: 200px;
+    min-width: 200px;
+    min-height: 150px;
+    border: 1px solid var(--c-primary);
+    border-radius: var(--b-r-1);
+    transition: cubic-bezier(0.44,-0.39, 0.41, 1.34) 300ms;
+
+    box-sizing: border-box;
+    cursor: pointer;
+}
+img:hover{
+    border: 3px solid var(--c-extra);
+    box-shadow: var(--b-s-2);
+}
+aside{
+    visibility: hidden;
+    position: absolute;
+}
+@media screen and (max-width: 700px){
+    .carquiz{
+        width: 400px;
+    }
+    .response{
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    gap: 1rem;
+    margin: 0;
+    }
+    img{
+    width: 300px;
+    height: 200px;
+    margin: auto;
+    }
+}
+</style>

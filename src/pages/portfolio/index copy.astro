@@ -1,0 +1,21 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import { getPortfolio } from '../../data/portfolio-notion';
+
+
+const { portfolio } = Astro.params
+
+const info = (await getPortfolio({ filterBy: portfolios }))[0]
+
+if (!info) { 
+  return Astro.redirect("/404")
+}
+---
+
+<Layout title='Portfolio'>
+    <Header title='Portfolio'/>
+    <ul>
+        {portfolios.map((post) => <li><a href={post.url}>{post.frontmatter.title}</a></li>)}
+    </ul>
+</Layout>

@@ -1,0 +1,56 @@
+---
+export interface Props {
+    id: number,
+}
+const {
+    id,
+} = Astro.props
+---
+
+<article class="cardquiz">
+    <section class="response">
+        <h3>Puedes retroceder para <br> cambiar su preferencia. <br> Si está satisfecho aprete</h3>
+        <button>Envinar</button>
+    </section>
+
+    <aside>{id}</aside>
+
+</article>
+
+
+
+<style>
+.cardquiz{
+    width: 700px;
+    text-align: -webkit-center;
+}
+
+h3{
+    margin-top: 4rem;
+    color: var(--c-extra);
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+aside{
+    visibility: hidden;
+    position: absolute;
+}
+button{
+    width: 8rem;
+    height: 4rem;
+    border-radius: var(--b-r-1);
+    background-color: var(--c-extra);
+    font-size: 1.3rem;
+    color: var(--c-w);
+}
+button:hover{
+    background-color: var(--c-extra50);
+}
+
+@media screen and (max-width: 700px){
+    .cardquiz{
+        width: 400px;
+    }
+}
+</style>

@@ -1,0 +1,54 @@
+---
+export interface Props {
+    subtitle: string,
+    id: number,
+}
+const {
+    subtitle,
+    id,
+} = Astro.props
+---
+
+<article class="cardquiz">
+    <h3>{subtitle}</h3>
+    <section class="response">
+        <input type="text" placeholder="Escriba aqui" name="local-name" id="local-id">
+    </section>
+
+    <aside>{id}</aside>
+
+</article>
+
+
+
+<style>
+.cardquiz{
+    width: 700px;
+    text-align: -webkit-center;
+}
+
+h3{
+    margin-top: 40px;
+    color: var(--c-extra);
+    text-align: center;
+    font-size: 1.5rem;
+}
+input{
+    height: 3rem;
+    font-size: 1rem;
+    text-align: center;
+    width: 390px;
+    margin: auto;
+}
+
+aside{
+    visibility: hidden;
+    position: absolute;
+}
+
+@media screen and (max-width: 700px){
+    .cardquiz{
+        width: 400px;
+    }
+}
+</style>

@@ -1,0 +1,54 @@
+---
+export interface Props {
+    title: string,
+}
+
+const {
+    title,
+} = Astro.props
+
+---
+
+<header>
+    <div class="button"> <h4>< </h4> </div>
+    <h2>{title}</h2>
+    <div class="button"> <h4> > </h4> </div>
+</header>
+
+<style>
+
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--c-extra);
+    height: 3rem;
+    color: var(--c-l-g);
+}
+
+.button{
+    width: 3rem;
+    height: 3rem;
+    transition: 200ms;
+    cursor: pointer;
+}
+.button:hover{
+    background-color: var(--c-extra50);
+}
+
+h2 {
+  margin: 0;
+  text-align: center;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 2rem;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  transition: color 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+h4{
+    font-size: 2rem;
+    margin: 0px;
+    text-align: center;
+}
+</style>

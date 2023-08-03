@@ -1,12 +1,12 @@
 import { Client } from '@notionhq/client'
 
-const DATABASE_ID = 'dbc937e6b46844009dc053d8efd02dcf'
+const DATABASE_ID = 'c190e15081694b3b8aa59f9543b0f32b'
 
 const notion = new Client({
     auth: import.meta.env.NOTION_TOKEN
 })
 
-export const getPortfolio = async ({ filterBy } = {}) => {
+export const getPortfolios = async ({ filterBy } = {}) => {
     const query = { database_id: DATABASE_ID}
 
     if (filterBy) {
@@ -17,16 +17,18 @@ export const getPortfolio = async ({ filterBy } = {}) => {
             }
         }
     }
+    
     const { results } = await notion.databases.query(query)
-    console.log(results);
     return results.map(page => {
         const { properties } = page
-        const { slug, title } = properties;
-        console.log(results)
+
+        const { slug, title, img, categoria  } = properties
+
         return {
             id: slug.rich_text[0].plain_text,
             title: title.title[0].plain_text,
-        }
-        
-    })
+            img: img.files[0].file.url,
+            categoria: properties.categoria.multi_select.map(tag => tag.name),
+    }})
+
 }

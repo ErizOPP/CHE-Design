@@ -1,10 +1,10 @@
 ---
-import Layout from "../src/layouts/Layout.astro";
-import { getServicios } from "../src/data/servicio";
+import Layout from "../../layouts/Layout.astro";
+import { getPortfolios } from "../../data/portfolio-notion";
 
-const { servicio } = Astro.params
+const { portfolio } = Astro.params
 
-const info = (await getServicios({ filterBy: servicio }))[0]
+const info = (await getPortfolios({ filterBy: portfolio }))[0]
 
 if (!info) { 
   return Astro.redirect("/404")
