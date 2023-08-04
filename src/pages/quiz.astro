@@ -7,9 +7,9 @@ import QuizStart from '../components/quiz/QuizStart.astro';
 import QuizEnd from '../components/quiz/QuizEnd.astro';
 import Simbolo from '/simboloche.svg'
 ---
-
-<Layout title="CHE! Design - Tarifa">
-	<Header title='Quiz'/>
+<script type="text/javascript" src="../../data/quiz.js"></script>
+<Layout title="CHE! Design - Quiz">
+	<Header title='Encuesta para Cliente'/>
 	<main>
         <article class="quiz">
             <QuizHeader title='Quiz'/>
@@ -68,6 +68,7 @@ import Simbolo from '/simboloche.svg'
     min-width: 350px;
     max-width: 700px;
     margin: 1rem;
+    background-color: var(--c-w25);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     border-radius: var(--b-r-1);

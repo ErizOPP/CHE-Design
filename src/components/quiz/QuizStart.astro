@@ -9,10 +9,15 @@ const {
 } = Astro.props
 ---
 
+
+
+
 <article class="cardquiz">
     <h3>{subtitle}</h3>
     <section class="response">
         <input type="text" placeholder="Escriba aqui" name="local-name" id="local-id">
+        <button class="alert"> Comenzar </button>
+
     </section>
 
     <aside>{id}</aside>
@@ -34,11 +39,35 @@ h3{
     font-size: 1.5rem;
 }
 input{
+    display: block;
     height: 3rem;
     font-size: 1rem;
     text-align: center;
     width: 390px;
     margin: auto;
+    border-radius: var(--b-r-1);
+    border: 2px solid var(--c-extra);
+}
+
+button{
+    margin: 2rem;
+    width: 8rem;
+    height: 4rem;
+    border-radius: var(--b-r-1);
+    background-color: var(--c-extra);
+    font-size: 1.3rem;
+    color: var(--c-w);
+    transition: all 200ms;
+}
+button:hover{
+    background-color: var(--c-pass);
+    transition-timing-function: ease-in-out;
+    transform: translateX(10px);
+}
+button.alert:hover{
+    background-color: var(--c-alert);
+    transition-timing-function: ease-in-out;
+    transform: translateX(-10px);
 }
 
 aside{

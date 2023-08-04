@@ -1,0 +1,77 @@
+section.markdown{
+    max-width: 720px;
+    margin: auto;
+    margin-top: 4rem;
+}
+
+
+@media screen and (max-width: 800px){
+	section.markdown{
+        margin: 2rem;
+        
+	}
+}
+
+/*Titles */  /*Titles */  /*Titles */  /*Titles */  
+h1,h2,h3,h4,h5,h6{
+    margin: 0;
+    color: var(--c-d);
+}
+h1{
+    font-size: 1.6rem;
+}
+h2{
+    font-size: 1.4rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: var(--c-primary);
+}
+h3{
+    font-size: 1.3rem;
+}
+h4{
+    font-size: 1.2rem;
+}
+h5{
+    font-size: 1.1rem;
+}
+h6{
+    font-size: 1rem;
+}
+/*TEXT TEXT  */  /*TEXT TEXT  */  /*TEXT TEXT  */
+del{
+    text-decoration: underline;
+}
+/*BLOCKQUOTE */  /*BLOCKQUOTE */  /*BLOCKQUOTE */
+blockquote{
+    border: 2px solid var(--c-extra);
+    display: inline-block;
+    border-radius: var(--b-r-06);
+    padding: 1rem 1rem;
+    margin: 4px;
+    margin-left: 0.5rem;
+}
+blockquote p {
+    margin: 0;
+    font-style: italic;
+    font-weight: 500;
+    color: var(--c-extra);
+}
+/*TABLE */  /*TABLE */  /*TABLE */  
+table{
+
+}
+table thead{
+
+}
+table tbody{
+    text-align: center;
+    
+}
+
+/*CODE CODE*/ /*CODE CODE*/ /*CODE CODE*/ 
+pre{
+    background-color: red !important;
+}
+code{
+    background-color: burlywood;
+}

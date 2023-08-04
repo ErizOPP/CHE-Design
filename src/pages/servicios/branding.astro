@@ -2,11 +2,12 @@
 import Layout from '../../layouts/Layout.astro';
 import Header from "../../components/Header.astro";
 import MarkDown from '../../content/servicios/branding.md'
+import StyleMarkDown from '../../layouts/stylemarkdown.css'
 ---
-
+<StyleMarkDown/>
 <Layout title='Marca Corporativa' >
     <Header title='Marca Corporativa'/>
-    <section class="markdown-servicios">
+    <section class="markdown">
         <MarkDown/>
     </section>
 </Layout>
