@@ -10,7 +10,7 @@ import Simbolo from '/simboloche.svg';
 	<main>
 		<img src={Simbolo} alt="" class="simbolo">
 		<h1>Diseño Grafico</h1>
-		<img class="logo" src={Logo} alt="Logo Che">
+		<img class="logo" src={Logo} id="easter-egg-image" alt="Logo Che">
 		<div class="menu">
 			<ul role="list" class="link-card-grid">
 				<IndexLinks
@@ -28,6 +28,8 @@ import Simbolo from '/simboloche.svg';
 				title="Acerca de"
 				body="Conozca más sobre CHE!."
 				/>
+			</ul>
+			<div id="easter-egg-container" class="hidden-content">
 				<IndexLinks
 				href=quiz
 				title="quiz"
@@ -38,8 +40,8 @@ import Simbolo from '/simboloche.svg';
 				title="tarifa"
 				body="tarifa"
 				/>
-			</ul>
-			<p>Una <span class="subrayado">Agencia Creativa</span> para <br>que <span class="subrayado">juntos destaquemos</span><br>tu <span class="subrayado">Negocio</span> :) </p>
+			</div>
+			<p>Una <span class="subrayado">Agencia Creativa</span> para <br>que <span class="subrayado">juntos destaquemos</span><br>tu <span class="subrayado">Negocio</span></p>
 		</div>
 	</main>
 </Layout>
@@ -57,7 +59,7 @@ main {
     align-items: end;
 }
 img.logo{
-	width: 500px;
+	max-width: 500px;
 }
 main div.menu{
     display: flex;
@@ -66,7 +68,7 @@ main div.menu{
 
 }
 ul{
-    width: 400px;
+    width: 340px;
     margin: 0;
     padding: 0;
 }
@@ -80,48 +82,18 @@ h1 {
 	top: -200px;
 	z-index: -1;
 }
-@media screen and (max-width: 900px){
+@media screen and (max-width: 860px){
 	main{
-		gap: 20px;
-		justify-content: center;
-		align-items: center;
-		width: auto;
-		height: auto;
-
-	}
-	main div{
-		gap: 20px;
-		flex-direction: column-reverse;
-	}
-	img.logo{
-		width: 510px;
-	}
-	ul {
-		width: fit-content;
-		position: static;
-	}
-}
-@media screen and (max-width: 600px){
-	.SwitchDarkLight{
-	position: static;
-		margin-top: -32px;
-		margin-left: 95%
-}
-	main{
-		gap: 20px;
-		justify-content: center;
-		align-items: center;
-		width: auto;
-		height: auto;
 		padding: 2rem;
+		justify-content: center;
+		align-items: center;
 	}
 	main div{
-		gap: 20px;
 		flex-direction: column-reverse;
+		align-items: center;
 	}
 	img.logo{
-		width: auto;
-		margin-top: 40px;
+		max-width: 400px;
 	}
 }
 
@@ -168,5 +140,34 @@ span.subrayado:hover{
 	margin: 100px;
 }
 
-
+.hidden-content {
+  display: none;
+}
 </style>
+
+<script>
+// Obtener la imagen y el div objetivo
+const easterEggImage = document.getElementById('easter-egg-image');
+const easterEggContainer = document.getElementById('easter-egg-container');
+
+// Contador de clics
+let clickCount = 0;
+
+// Función para agregar la clase al div cuando se cumple la condición
+function removeClassOnEasterEgg() {
+if (clickCount >= 4) {
+	easterEggContainer?.classList.remove('hidden-content');
+	// Si deseas eliminar el evento de clic después de activar el easter egg, descomenta la siguiente línea.
+	// easterEggImage.removeEventListener('click', countClicks);
+}
+}
+
+// Función para contar los clics en la imagen
+function countClicks() {
+clickCount++;
+removeClassOnEasterEgg();
+}
+
+// Agregar el evento de clic a la imagen
+easterEggImage?.addEventListener('click', countClicks);
+</script>

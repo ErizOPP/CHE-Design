@@ -31,47 +31,50 @@ import AboutMeCover from '../../public/about-me-cover.webp'
 </Layout>
 
 <style>
-    main{
-        color: var(--c-d);
-        display: flex;
+main{
+    color: var(--c-d);
+    display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    }
-    article {
-        align-self: center;
-    }
-        section.che{
+}
+article {
+    align-self: center;
+    padding: 0px 0.5rem;
+}
+    section.che{
 
-        }
-        section.me{
+    }
+    section.me{
 
+    }
+    h3{
+        text-shadow: 0px 0px 30px var(--c-l-g);
+    }
+    p{
+        max-width: 50ch;
+    }
+    .social-media{
+        font-family: ;
+    }
+    a{
+        padding: 0.5rem;
+        margin: 0px 0.6rem;
+        text-decoration: none;
+        font-size: 2rem;
+        transition: 200ms;
+        color: var(--c-d);
+    }
+        a:hover{
+            color: var(--c-primary);
         }
-            h3{
-                text-shadow: 0px 0px 30px var(--c-l-g);
-            }
-            p{
-                max-width: 50ch;
-            }
-            .social-media{
-                font-family: ;
-            }
-            a{
-                padding: 0.5rem;
-                margin: 0px 0.6rem;
-                text-decoration: none;
-                font-size: 2rem;
-                transition: 200ms;
-                color: var(--c-d);
-            }
-            a:hover{
-                color: var(--c-primary);
-            }
-        img.photo{
-            width: 80%;
-            max-width: 500px;
-            margin: 20px;
-            border-radius: var(--b-r-2);
-            box-shadow: 0px 0px 20px var(--c-l), 0px 0px 1000px var(--c-primary) ;
-        }
+    img.photo{
+        z-index: -1;
+        width: 80%;
+        max-width: 500px;
+        margin: 20px;
+        margin-bottom: 3rem;
+        border-radius: var(--b-r-2);
+        box-shadow: 0px 0px 20px var(--c-l), 0px 0px 1000px var(--c-primary) ;
+    }
 
 </style>
