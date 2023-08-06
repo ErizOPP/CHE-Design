@@ -1,6 +1,5 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Header from '../components/Header.astro';
 import QuizCard from '../components/quiz/QuizCard.astro';
 import QuizHeader from '../components/quiz/QuizHeader.astro';
 import QuizStart from '../components/quiz/QuizStart.astro';
@@ -8,8 +7,7 @@ import QuizEnd from '../components/quiz/QuizEnd.astro';
 import Simbolo from '/simboloche.svg'
 ---
 <script type="text/javascript" src="../../data/quiz.js"></script>
-<Layout title="CHE! Design - Quiz">
-	<Header title='Encuesta para Cliente'/>
+<Layout title="CHE! Design - Quiz" titleHeader='Encuesta para Cliente'>
 	<main>
         <article class="quiz">
             <QuizHeader title='Quiz'/>

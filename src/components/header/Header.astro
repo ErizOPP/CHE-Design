@@ -1,0 +1,51 @@
+---
+import BackPage from './BackPage.astro'
+import SwitchDarkLight from './SwitchDarkLight.astro';
+
+interface Props {
+	titleHeader: string;
+}
+const { titleHeader } = Astro.props;
+---
+
+    <nav>
+        <ul>
+            <section class="header">
+                <div><BackPage href=/></BackPage></div>
+                <h1>{titleHeader}</h1>
+                <SwitchDarkLight></SwitchDarkLight>
+            </section>
+        </ul>
+    </nav>
+
+
+<style>
+    nav{
+        margin-top: 64px;
+    }
+    ul{
+        width: 100vw;
+        z-index: 10;
+        backdrop-filter: blur(10px);
+        top: 0px;
+        left: 0px;
+        position: fixed;
+        display: block;
+    }
+    section.header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0px 40px;
+        max-width: 1440px;
+        height: 62px;
+        margin: auto;
+    }
+
+    h1{
+        color: var(--c-primary) !important;
+        font-size: 1.17em !important;
+        margin-block-start: 1em !important; 
+        margin-block-end: 1em !important;
+    }
+</style>

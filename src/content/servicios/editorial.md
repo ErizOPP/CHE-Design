@@ -1,3 +1,14 @@
+Editorial
+Hoy el Diseño Editorial va más allá de los medios impresos. También engloba los formatos digitales. Nos encanta diseñar revistas, periódicos, informes, memorias, catálogos… Damos forma a tus contenidos para crear historias que cautiven a tu público objetivo.
+
+
+
+
+
+
+
+
+
 # Dillinger
 ## _The Last Markdown Editor, Ever_
 

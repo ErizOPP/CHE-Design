@@ -33,7 +33,7 @@ export const servicio = [
     {
         title: 'Publicidad',
         description: 'Diseño de producto, bolsas, cajas, etiquetas, y más.',
-        img: "/servicios/cover-editorial.webp",
+        img: "/servicios/cover-editoria.webp",
         href: '/servicios/publicidad'
     },
     {
@@ -45,7 +45,7 @@ export const servicio = [
     {
         title: 'Ilustración',
         description: 'Uso de Procreate para generar Ilustraciones Realistas.',
-        img: '/servicios/cover-ilustracion.webp',
+        img: '/servicios/cover-ilustration.webp',
         href: '/servicios/ilustracion'
     },
 ]

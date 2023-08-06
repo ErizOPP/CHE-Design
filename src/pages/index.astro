@@ -1,42 +1,39 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Indice from '../components/Indice.astro';
+import IndexLinks from '../components/IndexLinks.astro';
 import Logo from '/logo.svg';
-import Simbolo from '/simboloche.svg'
-import SwitchDarkLight from '../components/SwitchDarkLight.astro';
-
+import Simbolo from '/simboloche.svg';
 ---
 
-<Layout title="CHE! Design">
+<Layout title="CHE! Design" titleHeader="">
 	
 	<main>
-		<div class="SwitchDarkLight"><SwitchDarkLight/></div>
 		<img src={Simbolo} alt="" class="simbolo">
 		<h1>Diseño Grafico</h1>
 		<img class="logo" src={Logo} alt="Logo Che">
 		<div class="menu">
 			<ul role="list" class="link-card-grid">
-				<Indice
+				<IndexLinks
 					href=portfolio
 					title="Portfolio"
 					body="Algunos trabajos realizados."
 				/>
-				<Indice
+				<IndexLinks
 				href=servicios
 				title="Servicios"
 				body="Conozca las posiblidades que le brindamos."
 				/>
-				<Indice
+				<IndexLinks
 				href=acercade
 				title="Acerca de"
 				body="Conozca más sobre CHE!."
 				/>
-				<Indice
+				<IndexLinks
 				href=quiz
 				title="quiz"
 				body="quiz"
 				/>
-				<Indice
+				<IndexLinks
 				href=tarifa
 				title="tarifa"
 				body="tarifa"
@@ -163,11 +160,11 @@ span.subrayado:hover{
 .instructions strong {
 	color: rgb(var(--accent));
 }
-.link-Indice-grid {
+.link-IndexLinks-grid {
 	display: inline-block;
 	padding: 0;
 }
-.Indice{
+.IndexLinks{
 	margin: 100px;
 }
 

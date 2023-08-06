@@ -8,6 +8,7 @@ import { Icon } from "astro-icon";
     <option value="light">Claro</option>
   </select>
 </div>
+
 <style>
   :global(.dark) {
     color-scheme: dark;
@@ -24,7 +25,11 @@ option:checked {
   background: var(--c-primary);
   color: var(--c-l);
 }
+div{
+  width: 88px;
+}
 </style>
+
 <script>
   const select = document.getElementById("themeSwitch") as HTMLSelectElement;
   const theme = localStorage.getItem("theme");

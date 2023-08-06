@@ -1,19 +1,11 @@
 ---
 ---
 
-<style is:global>
+<style is:inline>
 	section.markdown{
     max-width: 720px;
     margin: auto;
-    margin-top: 4rem;
-}
-
-
-@media screen and (max-width: 800px){
-	section.markdown{
-        margin: 2rem;
-        
-	}
+    margin-top: 6rem;
 }
 
 /*Titles */  /*Titles */  /*Titles */  /*Titles */  
@@ -37,32 +29,86 @@ h4{
 }
 h5{
     font-size: 1.1rem;
+    text-align: center;
+    color: var(--c-subrayado);
+    margin-bottom: 4px;
+    
 }
 h6{
     font-size: 1rem;
 }
 /*TEXT TEXT  */  /*TEXT TEXT  */  /*TEXT TEXT  */
+p{
+
+}
+a{
+    color: var(--c-subrayado);
+    text-decoration-line: underline !important;
+    transition: 200ms;
+}
+a:hover{
+    color: var(--c-d);
+    text-decoration-line: none !important;
+}
 del{
     text-decoration: underline;
 }
+strong{
+
+}
+em{
+
+}
+br{
+    background-color: aquamarine;
+}
+hr{
+
+}
+/* LIST LIST */  /* LIST LIST */  /* LIST LIST */  
+ol{
+
+}
+li{
+
+}
+ul{
+
+}
+
 /*BLOCKQUOTE */  /*BLOCKQUOTE */  /*BLOCKQUOTE */
 blockquote{
-    border: 2px solid var(--c-extra);
-    display: inline-block;
-    border-radius: var(--b-r-06);
+
     padding: 1rem 1rem;
-    margin: 4px;
-    margin-left: 0.5rem;
+    margin: 0.5rem 1rem;
+    border-left: 6px solid var(--c-w);
+}
+blockquote::before{
+    content: "💫";
+    display: block;
+    font-size: 2rem;
+    height: 0;
+    position: relative;
+    top: -30px;
+    left: -30px;
 }
 blockquote p {
+    
     margin: 0;
     font-style: italic;
     font-weight: 500;
     color: var(--c-extra);
+    
 }
+blockquote p:first-child{
+    margin-left: 8px;
+}
+
 /*TABLE */  /*TABLE */  /*TABLE */  
 table{
-
+    margin: auto;
+    border-spacing: 0px;
+    
 }
 table thead{
 
@@ -71,12 +117,72 @@ table tbody{
     text-align: center;
     
 }
+table td{
+    border-right: 1px solid var(--c-d);
+    padding: 4px 16px;
+}
+table th{
+    padding: 4px 16px;
+    border-right: 1px solid var(--c-d);
+}
+table tr{
 
+}
 /*CODE CODE*/ /*CODE CODE*/ /*CODE CODE*/ 
 pre{
-    background-color: red !important;
+    background-color: var(--c-extracode) !important;
+    line-height: 1.75;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    border-radius: .375rem;
+    padding: 1em 1.5em;
 }
 code{
-    background-color: burlywood;
+    background-color: var(--c-extracode) !important;
+    font-family: system-ui, sans-serif !important;
+    font-weight: 500;
+    padding: 0px 2px 2px 2px;
+    border-radius: var(--b-r-03);
+}
+
+sup{
+    background-color: rebeccapurple;
+}
+input{
+    background-color: brown;
+}
+
+p.with-image {
+    text-align: center;
+}
+p>img{
+    width: 500px;
+    border-radius: var(--b-r-1);
+}
+
+@media screen and (max-width: 800px){
+	section.markdown{
+        margin: 2rem;
+        
+	}
+    p>img{
+    width: 80vw;
+    border-radius: none;
+}
 }
 </style>
+
+<script>
+    // Obtener todos los elementos <p> en la página
+    const paragraphs = document.querySelectorAll('p');
+  
+    // Iterar a través de cada párrafo
+    paragraphs.forEach((paragraph) => {
+      // Verificar si el párrafo contiene una etiqueta <img>
+      if (paragraph.querySelector('img')) {
+        // Agregar una clase al párrafo que contiene una imagen
+        paragraph.classList.add('with-image');
+      }
+    });
+  </script>
+
