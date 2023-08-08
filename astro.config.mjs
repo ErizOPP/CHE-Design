@@ -10,5 +10,4 @@ export default defineConfig({
   integrations: [mdx(), sitemap()],
   output: 'hybrid',
   adapter: cloudflare(),
-
 });
