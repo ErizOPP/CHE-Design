@@ -1,5 +1,5 @@
 
-![cover](mdimg/branding-cover.webp)
+![cover](../servicios/mdimg/branding-cover.webp)
 # Primero lo primero
 >Somos un estudio de Diseño Gráfico dedicado a desarrollar ~Identidades Visuales únicas~.
 >
