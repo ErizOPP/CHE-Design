@@ -1,39 +1,42 @@
 ---
 export interface Props {
-	slug: string;
+	id: string;
 	content: string;
 	images: string;
-	category: string;
 	program: string;
+	url: string;
 
+	category: [];
 	description: string;
 	title: string;
-    imgsrc: string;
-	href: string;
+    img: string;
 }
 
 
-const {slug, description, content, images, category, program, href, title, imgsrc} = Astro.props;
+
+const {id, description, category, url, title, img} = Astro.props;
 ---
 
 <li class="portfolio-cards">
-	<a href={href}>
+	<a href={url}>
 		<h2>{title}</h2>
-        <img src={imgsrc} alt={title}>
-		<p>{description}</p>
-		<li>{category}</li>
+        <img src={img} alt={title}>
+		<p> description: {description}</p>
+		<ul>
+			{category.map((category) => ( <p> {category} </p> ) ) }
+		</ul>
 	</a>
 </li>
 <style>
 	.portfolio-cards {
         max-width: 800px;
-        height: 400px;
+        height: 800px;
 		margin: auto;
 		border: 2px solid var(--c-d);
 		border-radius: 1rem;
 		transition: background-color 0.3s cubic-bezier(0.22, 1, 0.36, 1);
         box-shadow: var(--b-s-1);
-        overflow: hidden;
+        /*overflow: hidden;*/
     }
 
 	.portfolio-cards > a {
@@ -63,7 +66,7 @@ const {slug, description, content, images, category, program, href, title, imgsr
         box-shadow: var(--b-s-2);
         transition: 300ms;
 		border: 1px solid var(--c-d);
-		transform: translateY(50px)
+		/*transform: translateY(50px)*/
    }
    .portfolio-cards:hover {
 		border: 2px solid var(--c-primary);

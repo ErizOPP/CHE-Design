@@ -8,7 +8,7 @@ const notion = new Client({
 
 export const getPortfolios = async ({ filterBy } = {}) => {
     const query = { database_id: DATABASE_ID}
-
+    
     if (filterBy) {
         query.filter = {
         property: 'slug',
@@ -21,14 +21,13 @@ export const getPortfolios = async ({ filterBy } = {}) => {
     const { results } = await notion.databases.query(query)
     return results.map(page => {
         const { properties } = page
-
-        const { slug, title, img, description, categoria  } = properties
-
+        
+        const { slug, title, img, description, category, url } = properties
         return {
             id: slug.rich_text[0].plain_text,
             title: title.title[0].plain_text,
             img: img.files[0].file.url,
-            categoria: properties.categoria.multi_select.map(tag => tag.name),
-    }})
-
+            description: description.rich_text[0].plain_text,
+            category: properties.category.multi_select.map(category => category.name),
+        }})
 }

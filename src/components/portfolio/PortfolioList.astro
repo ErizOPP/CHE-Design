@@ -7,10 +7,10 @@ const portoflios = await getPortfolios()
 
 <ul>
   {
-    portoflios.map(({ id, title, img }) => {
+    portoflios.map(({ id, title, img, description, category, href}) => {
       return (
         <li>
-          <PortfolioCards id={id} title={title} img={img} />
+          <PortfolioCards id={id} title={title} img={img} description={description} category={category} href={href}/>
         </li>
       )
     })
