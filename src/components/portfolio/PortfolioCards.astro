@@ -6,31 +6,29 @@ export interface Props {
 	category: string;
 	program: string;
 
+	description: string;
 	title: string;
     imgsrc: string;
 	href: string;
 }
 
 
-const {slug, content, images, category, program, href, title, imgsrc} = Astro.props;
+const {slug, description, content, images, category, program, href, title, imgsrc} = Astro.props;
 ---
 
 <li class="portfolio-cards">
 	<a href={href}>
-		<h2>
-			Trabajos de {title}
-		</h2>
+		<h2>{title}</h2>
         <img src={imgsrc} alt={title}>
+		<p>{description}</p>
+		<li>{category}</li>
 	</a>
 </li>
 <style>
 	.portfolio-cards {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        width: 400px;
-        height: 300px;
-		margin: 20px;
+        max-width: 800px;
+        height: 400px;
+		margin: auto;
 		border: 2px solid var(--c-d);
 		border-radius: 1rem;
 		transition: background-color 0.3s cubic-bezier(0.22, 1, 0.36, 1);

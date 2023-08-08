@@ -22,7 +22,7 @@ export const getPortfolios = async ({ filterBy } = {}) => {
     return results.map(page => {
         const { properties } = page
 
-        const { slug, title, img, categoria  } = properties
+        const { slug, title, img, description, categoria  } = properties
 
         return {
             id: slug.rich_text[0].plain_text,

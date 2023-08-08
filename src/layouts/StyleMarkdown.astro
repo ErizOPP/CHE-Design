@@ -108,7 +108,6 @@ blockquote p:first-child{
 table{
     margin: auto;
     border-spacing: 0px;
-    
 }
 table thead{
 
@@ -170,11 +169,15 @@ p>img{
     border-radius: none;
 }
 }
-@media screen and (max-width: 650px){
+@media screen and (max-width: 500px){
 	table{
         overflow-wrap: anywhere;
         font-size: 0.9rem;
+        padding: 0;
 	}
+    table th, table td{
+        padding: 0;
+    }
 }
 </style>
 

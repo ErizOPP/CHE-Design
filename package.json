@@ -10,14 +10,14 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/cloudflare": "^6.6.2",
-    "@astrojs/mdx": "^0.19.7",
-    "@astrojs/sitemap": "^2.0.1",
-    "@notionhq/client": "^2.2.9",
-    "@tryghost/content-api": "^1.11.16",
-    "astro": "^2.8.4",
-    "astro-icon": "^0.8.1",
-    "git": "^0.1.5",
-    "github": "^14.0.0"
+    "@astrojs/cloudflare": "6.6.2",
+    "@astrojs/mdx": "0.19.7",
+    "@astrojs/sitemap": "2.0.1",
+    "@notionhq/client": "2.2.9",
+    "@tryghost/content-api": "1.11.16",
+    "astro": "2.8.4",
+    "astro-icon": "0.8.1",
+    "git": "0.1.5",
+    "github": "14.0.0"
   }
 }

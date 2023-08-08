@@ -3,6 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import QuizCard from '../components/quiz/QuizCard.astro';
 import QuizHeader from '../components/quiz/QuizHeader.astro';
 import QuizStart from '../components/quiz/QuizStart.astro';
+import QuizImagen from '../components/quiz/QuizImagen.astro';
 import QuizEnd from '../components/quiz/QuizEnd.astro';
 import Simbolo from '/simboloche.svg'
 ---
@@ -16,40 +17,31 @@ import Simbolo from '/simboloche.svg'
                 subtitle='Nombre de su Negocio'
                 id={1}
                 />
-                <QuizCard 
-                id={2}
-                subtitle="Seleccione Estilo de Logo" 
-                img1='quiz/quiz-1-1.png' 
-                img2='quiz/quiz-1-2.png' 
-                img3='quiz/quiz-1-3.png' 
-                img4='quiz/quiz-1-4.png' 
-                />
-        
-                <QuizCard 
-                id={3}
-                subtitle="Estilo de Logo" 
-                img1='logo.svg' 
-                img2='logo.svg' 
-                img3='logo.svg' 
-                img4='logo.svg' 
-                />
-                <QuizCard 
-                id={4}
-                subtitle="Estilo de Logo" 
-                img1='logo.svg' 
-                img2='logo.svg' 
-                img3='logo.svg' 
-                img4='logo.svg' 
-                />
-                <QuizCard 
-                id={5}
-                subtitle="Estilo de Logo" 
-                img1='logo.svg' 
-                img2='logo.svg' 
-                img3='logo.svg' 
-                img4='logo.svg' 
-                />
-                <QuizEnd id={6}/>
+                <QuizCard id={2} subtitle="Seleccione Estilo de Logo">
+                    <QuizImagen imgLink='quiz/quiz-1-1.png' imgSelect="Logo texto e imagen compleja"/>
+                    <QuizImagen imgLink='quiz/quiz-1-2.png' imgSelect="Logo solo texto tipo cocacola"/>
+                    <QuizImagen imgLink='quiz/quiz-1-3.png' imgSelect="Solo isologo simple casi abstracto"/>
+                    <QuizImagen imgLink='quiz/quiz-1-4.png' imgSelect="Logo elegante texto e iso fino"/>
+                </QuizCard>
+                <QuizCard id={3} subtitle="Seleccione Cantidad de Colores">
+                    <QuizImagen imgLink='quiz/quiz-1-1.png' imgSelect="Un color"/>
+                    <QuizImagen imgLink='quiz/quiz-1-2.png' imgSelect="Dos colores"/>
+                    <QuizImagen imgLink='quiz/quiz-1-3.png' imgSelect="Cuatro Colores"/>
+                    <QuizImagen imgLink='quiz/quiz-1-4.png' imgSelect="Colores y Degrades"/>
+                </QuizCard>
+                <QuizCard id={4} subtitle="Seleccione Estilo de Tipografía">
+                    <QuizImagen imgLink='quiz/quiz-1-1.png' imgSelect="Tipografia Juguetona"/>
+                    <QuizImagen imgLink='quiz/quiz-1-2.png' imgSelect="Tipografia fina y elegante"/>
+                    <QuizImagen imgLink='quiz/quiz-1-3.png' imgSelect="Tipografia tipo scipt mano alzada"/>
+                    <QuizImagen imgLink='quiz/quiz-1-4.png' imgSelect="Tipografia con serif común"/>
+                </QuizCard>
+                <QuizCard id={5} subtitle="Seleccione asdsadsadsadasd">
+                    <QuizImagen imgLink='quiz/quiz-1-1.png' imgSelect="Logo texto e imagen compleja"/>
+                    <QuizImagen imgLink='quiz/quiz-1-2.png' imgSelect="Logo solo texto tipo cocacola"/>
+                    <QuizImagen imgLink='quiz/quiz-1-3.png' imgSelect="Solo isologo simple casi abstracto"/>
+                    <QuizImagen imgLink='quiz/quiz-1-4.png' imgSelect="Logo elegante texto e iso fino"/>
+                </QuizCard>
+                <QuizEnd id={2}/>
             </section>
         </article>
     </main>

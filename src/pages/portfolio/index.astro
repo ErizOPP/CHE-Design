@@ -1,6 +1,7 @@
 ---
 import Layout from "../../layouts/Layout.astro";
 import { getPortfolios } from "../../data/portfolio-notion";
+import PortfolioList from "../../components/portfolio/PortfolioList.astro";
 
 const { portfolio } = Astro.params
 
@@ -11,9 +12,9 @@ if (!info) {
 }
 ---
 
-<Layout title={`Servicio ${info.title}`}>
+<Layout title="Portfolio" titleHeader="Portfolio">
     <main>
-        <div>
+<!--        <div>
             <h1>{info.title}</h1>
             <p class="">{info.description}</p>
             <picture>
@@ -23,6 +24,7 @@ if (!info) {
                 alt={`Servicio ${info.title}`}
                 >
             </picture>
-        </div>
+        </div> -->
+        <PortfolioList/>
     </main>
 </Layout>
