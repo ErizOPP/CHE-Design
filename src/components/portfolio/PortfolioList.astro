@@ -9,10 +9,17 @@ const portoflios = await getPortfolios()
   {
     portoflios.map(({ id, title, img, description, category, href}) => {
       return (
-        <li>
+
           <PortfolioCards id={id} title={title} img={img} description={description} category={category} href={href}/>
-        </li>
+
       )
     })
   }
 </ul>
+
+<style>
+  ul{
+    width: fit-content;
+    margin: auto;
+  }
+</style>

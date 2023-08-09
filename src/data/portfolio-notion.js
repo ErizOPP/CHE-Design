@@ -20,14 +20,15 @@ export const getPortfolios = async ({ filterBy } = {}) => {
     
     const { results } = await notion.databases.query(query)
     return results.map(page => {
-        const { properties } = page
-        
-        const { slug, title, img, description, category, url } = properties
+        const { properties, url } = page
+        console.log(results)
+        const { slug, title, img, description, category } = properties
         return {
             id: slug.rich_text[0].plain_text,
             title: title.title[0].plain_text,
             img: img.files[0].file.url,
             description: description.rich_text[0].plain_text,
             category: properties.category.multi_select.map(category => category.name),
+            url: url[0],
         }})
 }

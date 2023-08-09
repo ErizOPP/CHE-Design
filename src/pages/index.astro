@@ -5,8 +5,10 @@ import Logo from '/logo.svg';
 import Simbolo from '/simboloche.svg';
 ---
 
-<Layout title="CHE! Design" titleHeader="">
-	
+<Layout title="CHE! Design" titleHeader="" metaDescription='Estudio Freelancer de Diseño Gráfico'>
+	<head>
+		<meta name="robots" content="index"/>
+	</head>
 	<main>
 		<img src={Simbolo} alt="" class="simbolo">
 		<h1>Diseño Grafico</h1>
@@ -28,19 +30,20 @@ import Simbolo from '/simboloche.svg';
 				title="Acerca de"
 				body="Conozca más sobre CHE!."
 				/>
+				<div id="easter-egg-container" class="hidden-content">
+					<IndexLinks
+					href=quiz
+					title="quiz"
+					body="quiz"
+					/>
+					<IndexLinks
+					href=tarifa
+					title="tarifa"
+					body="tarifa"
+					/>
+				</div>
 			</ul>
-			<div id="easter-egg-container" class="hidden-content">
-				<IndexLinks
-				href=quiz
-				title="quiz"
-				body="quiz"
-				/>
-				<IndexLinks
-				href=tarifa
-				title="tarifa"
-				body="tarifa"
-				/>
-			</div>
+
 			<p>Una <span class="subrayado">Agencia Creativa</span> para <br>que <span class="subrayado">juntos destaquemos</span><br>tu <span class="subrayado">Negocio</span></p>
 		</div>
 	</main>
@@ -69,7 +72,7 @@ main div.menu{
 
 }
 ul{
-    width: 340px;
+    width: 350px;
     margin: 0;
     padding: 0;
 }

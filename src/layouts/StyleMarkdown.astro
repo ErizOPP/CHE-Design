@@ -10,7 +10,7 @@
 
 /*Titles */  /*Titles */  /*Titles */  /*Titles */  
 h1,h2,h3,h4,h5,h6{
-    margin: 0;
+    margin: 2rem 0rem 0.5rem 0rem;
     color: var(--c-d);
 }
 h1{
@@ -70,10 +70,30 @@ ol{
 
 }
 li{
+    margin: 0.5rem 0.5rem !important;
 
 }
-ul{
+ul, li {
+  list-style: none; /* Remove default bullets */
+}
 
+ul li::before {
+    scale: 1.7; 
+  content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+  color: var(--c-extra); /* Change the color */
+  font-weight: bold; /* If you want it to be bold */
+  display: inline-block; /* Needed to add space between the bullet and the text */
+  width: 1em; /* Also needed for space (tweak if needed) */
+  margin-left: -1em; /* Also needed for space (tweak if needed) */
+}
+ul li ul li::before {
+    scale: 1.7; 
+  content: "\2023";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+  color: var(--c-extra); /* Change the color */
+  font-weight: bold; /* If you want it to be bold */
+  display: inline-block; /* Needed to add space between the bullet and the text */
+  width: 1em; /* Also needed for space (tweak if needed) */
+  margin-left: -1em; /* Also needed for space (tweak if needed) */
 }
 
 /*BLOCKQUOTE */  /*BLOCKQUOTE */  /*BLOCKQUOTE */
@@ -140,7 +160,7 @@ code{
     background-color: var(--c-extracode) !important;
     font-family: system-ui, sans-serif !important;
     font-weight: 500;
-    padding: 0px 2px 2px 2px;
+    padding: 1px 2px;
     border-radius: var(--b-r-03);
 }
 

@@ -3,9 +3,10 @@ import Header from '../components/header/Header.astro';
 interface Props {
 	title: string;
 	titleHeader: string;
+	metaDescription: string;
 }
 
-const { title, titleHeader } = Astro.props;
+const { title, titleHeader, metaDescription } = Astro.props;
 
 ---
 
@@ -13,10 +14,23 @@ const { title, titleHeader } = Astro.props;
 <html lang="es">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content="Estudio Freelancer de Diseño Gráfico">
+		<meta name="description" content={metaDescription}>
+		<meta  content={metaDescription}>
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/simboloche.svg" />
 		<meta name="generator" content={Astro.generator} />
+
+		<meta
+		property="og:image"
+		content="/simboloche.svg" />
+		<meta name="author" content="CHE! design">
+		<meta name="keywords" content="diseño gráfico, diseño, logo, marca, branding, editorial, social media, community manager, flyer, banner, cartel, publicidad, website, pagina web">
+
+
+		<meta content={title} property="og:title" />
+		<meta content={title} property="twitter:title" />
+		<meta name="twitter:card" content="summary_large_image" />
+
 		<title>{title}</title>
 	</head>
 	<nav class="info"> Si estas viendo esta página, actualmente está en desarrollo</nav>
