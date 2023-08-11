@@ -1,0 +1,111 @@
+---
+interface Props {
+	wp: string;
+	ig: string;
+	ml: string;
+}
+
+const { wp, ig, ml } = Astro.props;
+---
+<section>
+    <div class="button" id="nohidden"  > </div>
+    <nav class="contact" id="nohidden">
+        <h2>+ INFO</h2>
+        <a href={wp}  class="ico icon-whatsapp"></a>
+        <a href={ig} class="ico icon-instagram"></a>
+        <a href={ml} class="ico icon-gmail"></a>
+    </nav>
+</section>
+
+
+<style>
+    section{
+        position: fixed !important;
+        top: 6rem !important;
+        right: 0 !important;
+        z-index: 20 !important;
+
+        cursor: default;
+        
+    }
+    nav{
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 1rem !important;
+    width: 2rem !important;
+
+    transition: transform 400ms;
+    background-color: var(--c-l) !important;
+    padding: 0.5rem !important;
+    border-top-left-radius: var(--b-r-1) !important;
+    border-bottom-left-radius: var(--b-r-1) !important;
+    box-shadow: var(--b-s-2), var(--b-s-1) !important;
+}
+nav#hidden{
+    transform: translateX(50px);
+}
+div.button{
+    transform: translateY(-0.5rem);
+    background-color: var(--c-l) !important;
+    padding: 0.5rem !important;
+    border-radius: var(--b-r-2) !important;
+    box-shadow: var(--b-s-2), var(--b-s-1) !important;
+    animation: transform 300ms;
+    cursor: pointer;
+}
+div.button:hover{
+    background-color: var(--c-w)!important;
+}
+div#nohidden::before{
+    content: "➡️";
+    font-size: 1.4rem;
+    align-self: center !important;
+}
+div#hidden::before{
+    content: "⬅️";
+    font-size: 1.4rem;
+    align-self: center !important;
+}
+h2{
+    -webkit-writing-mode: vertical-lr !important;
+    align-self: center !important;
+    margin: 0 !important;
+    font-family: system-ui, sans-serif !important;
+    font-weight: bold !important;
+    font-size: 1.5em !important;
+    color: var(--c-d) !important;
+}
+a{
+        text-decoration: none !important;
+        font-size: 2rem !important;
+        
+        color: var(--c-d) !important;
+        cursor: pointer;
+        align-self: center !important;
+    }
+        a:hover{
+            color: var(--c-primary) !important;
+            transition: 300ms;
+        }
+</style>
+
+<script>
+
+document.addEventListener('DOMContentLoaded', function() {
+    const button = document.querySelector('.button');
+    const mainNav = document.querySelector('.contact');
+    const hiddenElement = document.querySelector('.button');
+    let isAlternate = false;
+
+    button.addEventListener('click', function() {
+        if (isAlternate) {
+            mainNav.id = 'nohidden';
+            hiddenElement.id = 'nohidden';
+        } else {
+            mainNav.id = 'hidden';
+            hiddenElement.id = 'hidden';
+        }
+        isAlternate = !isAlternate; // Cambiar el estado
+    });
+});
+</script>

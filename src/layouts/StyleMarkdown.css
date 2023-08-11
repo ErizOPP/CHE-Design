@@ -1,0 +1,211 @@
+section.markdown{
+    max-width: 720px;
+    margin: auto;
+    margin-top: 6rem;
+}
+
+/*Titles */  /*Titles */  /*Titles */  /*Titles */  
+h1,h2,h3,h4,h5,h6{
+    margin: 2rem 0rem 0.5rem 0rem;
+    color: var(--c-d);
+}
+h1{
+    font-size: 1.6rem;
+}
+h2{
+    font-size: 1.4rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: var(--c-primary);
+}
+h3{
+    font-size: 1.3rem;
+}
+h4{
+    font-size: 1.2rem;
+}
+h5{
+    font-size: 1.1rem;
+    text-align: center;
+    color: var(--c-subrayado);
+    margin-bottom: 4px;
+    
+}
+h6{
+    font-size: 1rem;
+}
+/*TEXT TEXT  */  /*TEXT TEXT  */  /*TEXT TEXT  */
+p{
+
+}
+a{
+    color: var(--c-subrayado);
+    text-decoration-line: underline !important;
+    transition: 200ms;
+}
+a:hover{
+    color: var(--c-d);
+    text-decoration-line: none !important;
+}
+del{
+    text-decoration: underline;
+}
+strong{
+
+}
+em{
+
+}
+br{
+    background-color: aquamarine;
+}
+hr{
+
+}
+/* LIST LIST */  /* LIST LIST */  /* LIST LIST */  
+ol{
+
+}
+li{
+    margin: 0.5rem 0.5rem !important;
+
+}
+ul, li {
+  list-style: none; /* Remove default bullets */
+}
+
+ul li::before {
+    scale: 1.7; 
+  content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+  color: var(--c-extra); /* Change the color */
+  font-weight: bold; /* If you want it to be bold */
+  display: inline-block; /* Needed to add space between the bullet and the text */
+  width: 1em; /* Also needed for space (tweak if needed) */
+  margin-left: -1em; /* Also needed for space (tweak if needed) */
+}
+ul li ul li::before {
+    scale: 1.7; 
+  content: "\2023";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+  color: var(--c-extra); /* Change the color */
+  font-weight: bold; /* If you want it to be bold */
+  display: inline-block; /* Needed to add space between the bullet and the text */
+  width: 1em; /* Also needed for space (tweak if needed) */
+  margin-left: -1em; /* Also needed for space (tweak if needed) */
+}
+
+/*BLOCKQUOTE */  /*BLOCKQUOTE */  /*BLOCKQUOTE */
+blockquote{
+
+    padding: 1rem 1rem;
+    margin: 0.5rem 1rem;
+    border-left: 6px solid var(--c-w);
+}
+blockquote::before{
+    content: "💫";
+    display: block;
+    font-size: 2rem;
+    height: 0;
+    position: relative;
+    top: -30px;
+    left: -30px;
+}
+blockquote p {
+    
+    margin: 0;
+    font-style: italic;
+    font-weight: 500;
+    color: var(--c-extra);
+    
+}
+blockquote p:first-child{
+    margin-left: 8px;
+}
+
+/*TABLE */  /*TABLE */  /*TABLE */  
+table{
+    margin: auto;
+    border-spacing: 0px;
+}
+table thead{
+
+}
+table tbody{
+    text-align: center;
+    
+}
+table td{
+    border-right: 1px solid var(--c-d);
+    padding: 4px 16px;
+}
+table th{
+    padding: 4px 16px;
+    border-right: 1px solid var(--c-d);
+}
+table tr{
+
+}
+/*CODE CODE*/ /*CODE CODE*/ /*CODE CODE*/ 
+pre{
+    background-color: var(--c-extracode) !important;
+    line-height: 1.75;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    border-radius: .375rem;
+    padding: 1em 1.5em;
+}
+code{
+    background-color: var(--c-extracode) !important;
+    font-family: system-ui, sans-serif !important;
+    font-weight: 500;
+    padding: 1px 2px;
+    border-radius: var(--b-r-03);
+}
+
+sup{
+    background-color: rebeccapurple;
+}
+input{
+    background-color: brown;
+}
+
+p.with-image {
+    text-align: center;
+}
+p>img{
+    width: 500px;
+    border-radius: var(--b-r-1);
+}
+
+@media screen and (max-width: 800px){
+	section.markdown{
+        margin: 2rem;
+        
+	}
+    p>img{
+    width: 80vw;
+    border-radius: none;
+}
+}
+@media screen and (max-width: 500px){
+	table{
+        overflow-wrap: anywhere;
+        font-size: 0.9rem;
+        padding: 0;
+	}
+    table th, table td{
+        padding: 0;
+    }
+}
+</style>
+
+<script>
+    // Obtener todos los elementos <p> en la página
+    const paragraphs = document.querySelectorAll('p');
+  
+    // Iterar a través de cada párrafo
+    paragraphs.forEach((paragraph) => {
+      // Verificar si el párrafo contiene una etiqueta <img>
+      if (paragraph.querySelector('img')) {
+        // Agregar una clase al párrafo que contiene una imagen
+        paragraph.classList.add('with-image');
+      }
+    });

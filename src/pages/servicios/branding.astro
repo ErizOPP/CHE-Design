@@ -1,10 +1,12 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import MarkDown from '../../content/servicios/branding.md'
-import StyleMarkDown from '../../layouts/StyleMarkdown.astro'
+import Contact from '../../components/Contact.astro';
+import StyleMarkdown from '../../layouts/StyleMarkdown.astro'
 ---
-<StyleMarkDown/>
+<StyleMarkdown/>
 <Layout title='Marca Corporativa' titleHeader='Marca Corporativa' >
+    <Contact/>
     <section class="markdown">
         <MarkDown/>
     </section>

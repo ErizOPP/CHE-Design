@@ -6,7 +6,54 @@ import QuizStart from '../components/quiz/QuizStart.astro';
 import QuizImagen from '../components/quiz/QuizImagen.astro';
 import QuizEnd from '../components/quiz/QuizEnd.astro';
 import Simbolo from '/simboloche.svg'
+
+import { initializeApp } from "firebase/app";
+import {firebaseConfig} from "../data/api-google"
+const app = initializeApp(firebaseConfig);
+import { getFirestore, addDoc, collection, doc, setDoc } from "firebase/firestore";
+const db = getFirestore(app);
+
+const input_name = "" ;
+const alt_color = "";
+const alt_logo = "";
+const alt_tipo = "";
+
+/*
+try {
+    const docRef = await addDoc(collection(db, "quiz"), {
+    name_local: {input_name},
+    select_cant_colores: {alt_color},
+    select_estilo_logo: {alt_logo},
+    select_estilo_tipo: {alt_tipo},
+  });
+
+  console.log("Document written with ID: ", docRef.id);
+} catch (e) {
+  console.error("Error adding document: ", e);
+}
+
+  const docRef = await addDoc(collection(db, "quiz"), {
+    name_local: "pruebalocal",
+    select_cant_colores: "pruebacolor",
+    select_estilo_logo: "pruebalogo",
+    select_estilo_tipo: "pruebatipo",
+  });*/
+
 ---
+<script>
+    // Obtener referencias a los elementos
+    const inputElement = document.getElementById("local-id");
+    const botonElement = document.getElementById("local-button");
+    // Agregar un evento 'click' al botón
+    botonElement.addEventListener("click", function() {
+        // Obtener el valor del input
+        const inputValue = inputElement?.value;
+
+        // Hacer algo con el valor (en este caso, mostrarlo en la consola)
+        console.log("El valor del input es: " + inputValue);
+    });
+</script>
+
 <script type="text/javascript" src="../../data/quiz.js"></script>
 <Layout title="CHE! Design - Quiz" titleHeader='Encuesta para Cliente'>
 	<main>
@@ -35,17 +82,12 @@ import Simbolo from '/simboloche.svg'
                     <QuizImagen imgLink='quiz/quiz-1-3.png' imgSelect="Tipografia tipo scipt mano alzada"/>
                     <QuizImagen imgLink='quiz/quiz-1-4.png' imgSelect="Tipografia con serif común"/>
                 </QuizCard>
-                <QuizCard id={5} subtitle="Seleccione asdsadsadsadasd">
-                    <QuizImagen imgLink='quiz/quiz-1-1.png' imgSelect="Logo texto e imagen compleja"/>
-                    <QuizImagen imgLink='quiz/quiz-1-2.png' imgSelect="Logo solo texto tipo cocacola"/>
-                    <QuizImagen imgLink='quiz/quiz-1-3.png' imgSelect="Solo isologo simple casi abstracto"/>
-                    <QuizImagen imgLink='quiz/quiz-1-4.png' imgSelect="Logo elegante texto e iso fino"/>
-                </QuizCard>
-                <QuizEnd id={2}/>
+                <QuizEnd id={5}/>
             </section>
         </article>
     </main>
     <img src={Simbolo} alt="" class="simbolo">
+    
 </Layout>
 
 <style>
@@ -67,10 +109,13 @@ import Simbolo from '/simboloche.svg'
     overflow: hidden;
     
     }
-    section{
+    /*section{
         display: -webkit-inline-box;
         position: relative;
         overflow-x: scroll;
+    }*/
+    section{
+        padding: 2rem 0px;
     }
     section:hover{
         

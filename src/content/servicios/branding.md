@@ -1,3 +1,4 @@
+
 ![cover](../../servicios/mdimg/branding-cover.webp)
 # Primero lo primero
 >Somos un estudio de Diseño Gráfico dedicado a desarrollar ~Identidades Visuales únicas~.
@@ -32,7 +33,8 @@ Incluye               |Logo - Iso    | Básico         | Completo     | Re-Brand
  * Una vez expuesta la entrega, podrá optarse por un solo cambio a modo de corrección si se necesitase.
  * La entrega es en forma vectorizada en .svg y también como imagen en .png y .jpg.
  * Se puede optar por pedir una breve explicación de como usar esos archivos en sus aplicaciones tanto si son impresiones o en RRSS.
-
+  
+![logo isologo](../../servicios/branding/logo-isologo.png)
 
 ## Branding Básico
 Comprende los ítems del inciso anterior.
@@ -42,6 +44,7 @@ Además se le entregará un Manual Normativo el cual tendrá especificaciones:
 * Una breve construcción de cómo se hizo su Marca. (si su Isologo es muy orgánico no incluirá este apartado).
 * Se incluye de entrega 2 variantes las cuales luego optativamente hay 2 correcciones posibles.
 
+![manual de marca](../../servicios/branding/marca-corporativa.jpg)
 
 ## Branding Completo
 Comprende los ítems del inciso anterior.
@@ -53,8 +56,11 @@ También se suman items al Manual de Marca:
 * Mock Up o Aplicaciones, ejemplos de cómo se vería su Marca aplicada en distintos contextos, Merch, Vehículo, Vidriera, etc.
 * Papelería: Se podrá elegir diseños aplicados a Papelería Básica como: Carta Personal, Sobre Membrete, Hoja A4.
 
+![mockup](../../servicios/branding/mockup.jpeg)
 
 ## Re-Branding
 Comprende los ítems del Branding Completo, con la diferencia que hay un estudio acerca del branding anterior y como una nueva versión puede resultar en un beneficio para el Negocio.
 
+----
+----
 ----

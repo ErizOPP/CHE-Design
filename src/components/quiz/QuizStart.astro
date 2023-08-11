@@ -9,22 +9,13 @@ const {
 } = Astro.props
 ---
 
-<script>
-    
-</script>
-
-
-
 <article class="cardquiz">
     <h3>{subtitle}</h3>
     <section class="response">
         <input type="text" placeholder="Escriba aqui" name="local-name" id="local-id">
-        <button onclick="pass" class="alert" > Comenzar </button>
-
+        <button id="local-button" class="alert" > Comenzar </button>
     </section>
-
     <aside>{id}</aside>
-
 </article>
 
 
@@ -84,3 +75,4 @@ aside{
     }
 }
 </style>
+
