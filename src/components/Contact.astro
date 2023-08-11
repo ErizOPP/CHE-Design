@@ -10,7 +10,7 @@ const { wp, ig, ml } = Astro.props;
 <section>
     <div class="button" id="nohidden"  > </div>
     <nav class="contact" id="nohidden">
-        <h2>+ INFO</h2>
+        <h2>ADQUIRIR</h2>
         <a href={wp}  class="ico icon-whatsapp"></a>
         <a href={ig} class="ico icon-instagram"></a>
         <a href={ml} class="ico icon-gmail"></a>
@@ -21,7 +21,7 @@ const { wp, ig, ml } = Astro.props;
 <style>
     section{
         position: fixed !important;
-        top: 6rem !important;
+        top: 5rem !important;
         right: 0 !important;
         z-index: 20 !important;
 
@@ -87,6 +87,9 @@ a{
             color: var(--c-primary) !important;
             transition: 300ms;
         }
+    a.icon-whatsapp{
+        font-size: 2.3rem !important;
+    }
 </style>
 
 <script>

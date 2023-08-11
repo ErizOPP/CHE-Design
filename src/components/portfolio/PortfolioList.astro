@@ -1,13 +1,13 @@
 ---
 import PortfolioCards from "../portfolio/PortfolioCards.astro";
-import { getPortfolios } from '../../data/portfolio-notion'
+import { getPortfolios } from '../../data/portfolio-wordpress.js';
 
-const portoflios = await getPortfolios()
+const portoflios = getPortfolios()
 ---
 
 <ul>
   {
-    portoflios.map(({ id, title, img, description, category, href}) => {
+    portoflios.res(({ id, title, img, description, category, href}) => {
       return (
 
           <PortfolioCards id={id} title={title} img={img} description={description} category={category} href={href}/>

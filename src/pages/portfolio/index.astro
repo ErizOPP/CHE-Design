@@ -1,30 +1,13 @@
 ---
-import Layout from "../../layouts/Layout.astro";
-import { getPortfolios } from "../../data/portfolio-notion";
-import PortfolioList from "../../components/portfolio/PortfolioList.astro";
+import Layout from '../../layouts/Layout.astro';
+import PortfolioList from '../../components/portfolio/PortfolioList.astro';
+
+
 
 const { portfolio } = Astro.params
 
-const info = (await getPortfolios({ filterBy: portfolio }))[0]
-
-if (!info) { 
-  return Astro.redirect("/404")
-}
 ---
 
-<Layout title="Portfolio" titleHeader="Portfolio" metaDescription="Visita los trabajos realizados en CHE! design">
-    <main>
-<!--        <div>
-            <h1>{info.title}</h1>
-            <p class="">{info.description}</p>
-            <picture>
-                <img 
-                class=""
-                src={info.cover}
-                alt={`Servicio ${info.title}`}
-                >
-            </picture>
-        </div> -->
-        <PortfolioList/>
-    </main>
+<Layout title='Portfolio'>
+  <PortfolioList/>
 </Layout>
